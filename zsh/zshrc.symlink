@@ -53,3 +53,9 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
+
+
+# STUDIO SETUP
+export PATH="/Users/obourne/dart-sdk/bin:${PATH}"
+export PUB_HOSTED_URL="https://soundtrap-pub.spotify.net"
+export PATH=$PATH:$HOME/.pub-cache/bin

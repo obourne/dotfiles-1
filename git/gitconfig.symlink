@@ -9,6 +9,18 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
+        # copied over from previous config
+        rbremote = !"git pull --rebase origin"
+	rbcurrent = !"git rebase -i $(git merge-base $(git rev-parse HEAD) develop)"
+	s = status -s
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	recent = !"git reflog | egrep -io \"moving from ([^[:space:]]+)\" | awk '{ print $3 }' | awk ' !x[$0]++' | head -n5"
+	sneaky-amend = !"git commit --all --amend --no-edit --no-verify"
+	quick-amend = !"git commit --all --amend --no-edit"
+	undo = reset HEAD~1 --mixed
+	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+	branches = branch -a
+	reb = "!r() { git rebase -i HEAD~$1; }; r"
 [color]
         diff = auto
         status = auto
@@ -16,7 +28,7 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = vim
+	editor = code --wait
 [apply]
         whitespace = nowarn
 [mergetool]
