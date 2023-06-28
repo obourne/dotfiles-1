@@ -7,7 +7,8 @@ eval "$(pyenv init -)"
 eval PATH="$(bash --norc -ec 'IFS=:; paths=($PATH); for i in ${!paths[@]}; do if [[ ${paths[i]} == "'/Users/obourne/.pyenv/shims'" ]]; then unset '\''paths[i]'\''; fi; done; echo "${paths[*]}"')"
 export PATH="/Users/obourne/.pyenv/shims:${PATH}"
 export PYENV_SHELL=zsh
-source '/opt/homebrew/Cellar/pyenv/2.3.5/completions/pyenv.zsh'
+# Uncomment and update version if using python again
+# source '/opt/homebrew/Cellar/pyenv/2.3.5/completions/pyenv.zsh'
 
 ## Uncomment for conda usage
 # # >>> conda initialize >>>
