@@ -43,6 +43,7 @@
         #
         # Setting to git 2.0 default to suppress warning message
         default = simple
+        autoSetupRemote = true
 [credential]
 	helper = osxkeychain
 [diff "spaceman-diff"]
@@ -50,3 +51,5 @@
 
 [init]
 	defaultBranch = main
+[user]
+	email = ollie.bourne@soundtrap.com

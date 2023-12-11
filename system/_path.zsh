@@ -6,4 +6,4 @@ export PATH="/usr/local/opt/liquibase:$PATH"
 # postgres
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # flutter
-export PATH="$PATH:`pwd`/flutter/bin"
+export PATH="$PATH:$HOME/flutter/bin"
